@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CatcherState
+public enum CatcherStateType
 {
-    Wait,
-    Convey,
-    Return,
-    Work
+    WaitState,
+    ConveyState,
+    ReturnState,
+    WorkState
 }
 
 public class Catcher : Worker
@@ -21,7 +21,8 @@ public class Catcher : Worker
     List<UntrimmedData> untrimmedDatas = new List<UntrimmedData>();
 
     //Catcher의 상태
-    public CatcherState nowState;
+    CatcherState nowState;
+    public CatcherStateType nowStateType;
 
     WorkerManager WM;
 
@@ -30,10 +31,23 @@ public class Catcher : Worker
         WM = SingletonManager.Get<WorkerManager>();
     }
 
-    //외부에서 호출, 상태 바꾸기
-    public virtual void TryChangeState(CatcherState state)
+    void Update()
     {
-        nowState = state;
+        nowState.Update();
+    }
+    
+    void FixedUpdate()
+    {
+        nowState.FixedUpdate();
+    }
+
+    //외부에서 호출, 상태 바꾸기
+    public virtual void TryChangeState(CatcherStateType state)
+    {
+        nowState.Exit();
+        nowStateType = state;
+        nowState = ReflectionBase.CreateInstanceFromType(ReflectionBase.TypeFromEnum(nowStateType));
+        
     }
 
     //물고기 잡기
@@ -50,5 +64,6 @@ public class Catcher : Worker
 
         //잡은 물고기를 저장
         untrimmedDatas.Add(caughtFish);
+        //
     }
 }

@@ -27,8 +27,8 @@ public class Boat : MonoBehaviour
     //배에 어부를 실을 때 호출
     public void Load(Fisher fisher)
     {
-        fisher.TryChangeState(CatcherState.Work);
-        if (fisher.nowState == CatcherState.Work) loadedFishers.Add(fisher);
+        fisher.TryChangeState(CatcherStateType.WorkState);
+        if (fisher.nowStateType == CatcherStateType.WorkState) loadedFishers.Add(fisher);
         CheckToGo();
     }
 
@@ -63,7 +63,7 @@ public class Boat : MonoBehaviour
         //배에 탄 사람들 운반하도록 시킴
         foreach (var fisher in loadedFishers)
         {
-            fisher.TryChangeState(CatcherState.Convey);
+            fisher.TryChangeState(CatcherStateType.ConveyState);
         }
 
         //배에 탄 사람들 비움
