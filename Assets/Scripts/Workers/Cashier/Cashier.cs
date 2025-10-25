@@ -16,7 +16,6 @@ public class Cashier : Worker
     List<TrimmedData> trimmedDatas = new List<TrimmedData>();
     CashierState nowState;
     public CashierStateType nowStateType;
-    WorkerManager WM;
 
     void Start()
     {
@@ -36,10 +35,10 @@ public class Cashier : Worker
     //외부에서 호출, 상태 바꾸기
     public virtual void TryChangeState(CashierStateType state)
     {
-        nowState.Exit();
+        if (nowState != null) nowState.Exit();
         nowStateType = state;
         nowState = ReflectionBase.CreateInstanceFromType(ReflectionBase.TypeFromEnum(nowStateType));
-
+        nowState.Handle(this);
     }
 
     public void AuctionConfirm()

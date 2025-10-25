@@ -1,8 +1,10 @@
 public abstract class CashierState
 {
-    Cashier _cashier;
+    protected Cashier _cashier;
+    protected WorkerManager WM;
     public virtual void Handle(Cashier cashier)
     {
+        WM = SingletonManager.Get<WorkerManager>();
         _cashier = cashier;
     }
 
