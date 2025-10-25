@@ -100,3 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 381143ba5d75bd641810a25cf76c28d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WM: {fileID: 0}
+  _slot: {fileID: 0}
+  nowStateType: 0
+  conveySpeed: 4

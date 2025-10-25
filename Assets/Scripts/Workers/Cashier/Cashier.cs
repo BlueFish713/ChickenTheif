@@ -1,22 +1,34 @@
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using UnityEngine;
 
 public enum CashierStateType
 {
     CashierWaitState,
     CashierGo2CatcherState,
-    CashieGo2ChefState,
-    CashieReturnState,
-    CashieSellState,
-    CashieAuctionState
+    CashierGo2ChefState,
+    CashierReturnState,
+    CashierSellState,
+    CashierAuctionState
 }
 public class Cashier : Worker
 {
-    List<UntrimmedData> untrimmedDatas = new List<UntrimmedData>();
-    List<TrimmedData> trimmedDatas = new List<TrimmedData>();
+    
+    public List<UntrimmedData> untrimmedDatas = new List<UntrimmedData>();
+    public List<TrimmedData> trimmedDatas = new List<TrimmedData>();
     CashierState nowState;
     public CashierStateType nowStateType;
+    public float conveySpeed;
 
+    void Awake()
+    {
+        EventManager.Subscribe(EventName.CallCashier, () =>
+        {
+            if (nowStateType == CashierStateType.CashierWaitState)
+                TryChangeState(CashierStateType.CashierGo2ChefState);
+        });
+    }
+    
     void Start()
     {
         WM = SingletonManager.Get<WorkerManager>();
