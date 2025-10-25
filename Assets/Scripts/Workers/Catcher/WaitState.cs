@@ -1,4 +1,4 @@
-public class WaitState : CatcherState
+public class CatcherWaitState : CatcherState
 {
     
 }

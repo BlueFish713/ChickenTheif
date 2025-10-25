@@ -3,10 +3,10 @@ using UnityEngine;
 
 public enum CatcherStateType
 {
-    WaitState,
-    ConveyState,
-    ReturnState,
-    WorkState
+    CatcherWaitState,
+    CatcherConveyState,
+    CatcherReturnState,
+    CatcherWorkState
 }
 
 public class Catcher : Worker
@@ -24,7 +24,8 @@ public class Catcher : Worker
     CatcherState nowState;
     public CatcherStateType nowStateType;
 
-    WorkerManager WM;
+    //Catcher의 Convey속도
+    [SerializeField] public float conveySpeed;
 
     void Start()
     {
@@ -44,10 +45,10 @@ public class Catcher : Worker
     //외부에서 호출, 상태 바꾸기
     public virtual void TryChangeState(CatcherStateType state)
     {
-        nowState.Exit();
+        if (nowState != null) nowState.Exit();
         nowStateType = state;
         nowState = ReflectionBase.CreateInstanceFromType(ReflectionBase.TypeFromEnum(nowStateType));
-
+        nowState.Handle(this);
     }
 
     //물고기 잡기

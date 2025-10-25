@@ -2,15 +2,10 @@ using UnityEngine;
 
 public class Diver : Catcher
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    
+    public override void Assign(Slot slot)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.Assign(slot);
+        TryChangeState(CatcherStateType.CatcherReturnState);
     }
 }

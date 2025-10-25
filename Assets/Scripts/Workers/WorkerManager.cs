@@ -8,10 +8,10 @@ using UnityEngine;
 [Singleton, RequireInScene]
 public class WorkerManager : MonoBehaviour
 {
-    const int maxCashier = 5;
-    const int maxChef = 5;
-    const int maxFisher = 5;
-    const int maxDiver = 5;
+    const int maxCashier = 3;
+    const int maxChef = 3;
+    const int maxFisher = 3;
+    const int maxDiver = 3;
 
     [BoxGroup("Worker List")] public List<Cashier> cashiers = new List<Cashier>();
     [BoxGroup("Worker List")] public List<Chef> chefs = new List<Chef>();
@@ -29,7 +29,8 @@ public class WorkerManager : MonoBehaviour
     [BoxGroup("Slot List")] public List<Slot> chefSlots = new List<Slot>();
     [BoxGroup("Slot List")] public List<Slot> fisherSlots = new List<Slot>();
     [BoxGroup("Slot List")] public List<Slot> diverSlots = new List<Slot>();
-
+    [SerializeField, Space(5)] public Boat boat;
+    [SerializeField, Space(5)] public Transform fisherSpawnPosition;
 
     [Button("CreateChef")]
     public void CreateChef()
@@ -60,7 +61,7 @@ public class WorkerManager : MonoBehaviour
         for (int i = chefs.Count - 1; i >= 0; i--)
         {
             if (chefs[i] == null) continue;
-            if (chefs[i].working) return chefs[i];
+            if (!chefs[i].working) return chefs[i];
         }
         return null;
     }

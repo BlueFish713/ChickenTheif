@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class Worker : MonoBehaviour
 {
-    protected Slot _slot;
-    public void Assign(Slot slot)
+    protected WorkerManager WM;
+    public Slot _slot;
+    public virtual void Assign(Slot slot)
     {
+        WM = SingletonManager.Get<WorkerManager>();
         _slot = slot;
     }
 }

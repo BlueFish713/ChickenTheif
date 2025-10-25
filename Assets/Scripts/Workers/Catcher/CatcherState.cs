@@ -1,8 +1,10 @@
 public abstract class CatcherState
 {
-    Catcher _catcher;
+    protected Catcher _catcher;
+    protected WorkerManager WM;
     public virtual void Handle(Catcher catcher)
     {
+        WM = SingletonManager.Get<WorkerManager>();
         _catcher = catcher;
     }
 

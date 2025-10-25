@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
@@ -13,10 +14,13 @@ public class Boat : MonoBehaviour
     public List<Fisher> loadedFishers = new List<Fisher>(); //배에 탄 어부 배열
     float boatX = 0;
 
+    public bool onOcean = false;
+
     WorkerManager WM;
 
     void Start()
     {
+        onOcean = false;
         WM = SingletonManager.Get<WorkerManager>();
     }
 
@@ -26,6 +30,7 @@ public class Boat : MonoBehaviour
         //BoatGo 이벤트가 발생하면 GoCoroutine, 애니메이션을 실행함
         EventManager.Subscribe(EventName.BoatGo, () =>
         {
+            onOcean = true;
             StartCoroutine(GoCoroutine());
             transform.DOMoveX(boatX+moveX, 5).SetEase(inease).SetAutoKill();
         });
@@ -33,7 +38,8 @@ public class Boat : MonoBehaviour
         //BoatRetrunStart 이벤트가 발생하면 애니메이션을 실행함
         EventManager.Subscribe(EventName.BoatRetrunStart, () =>
         {
-            transform.DOMoveX(boatX, 5).SetEase(outease).SetAutoKill();
+            Tween t = transform.DOMoveX(boatX, 5).SetEase(outease).SetAutoKill();
+            t.OnComplete(() => EventManager.Publish(EventName.BoatRetrunFinished));
         });
 
         //BoatRetrunFinished 이벤트가 발생하면 WhenBoatReturned를 실행함
@@ -43,8 +49,9 @@ public class Boat : MonoBehaviour
     //배에 어부를 실을 때 호출
     public void Load(Fisher fisher)
     {
-        fisher.TryChangeState(CatcherStateType.WorkState);
-        if (fisher.nowStateType == CatcherStateType.WorkState) loadedFishers.Add(fisher);
+        fisher.transform.SetParent(transform);
+        //fisher.TryChangeState(CatcherStateType.CatcherWorkState);
+        if (fisher.nowStateType == CatcherStateType.CatcherWorkState) loadedFishers.Add(fisher);
         CheckToGo();
     }
 
@@ -52,7 +59,7 @@ public class Boat : MonoBehaviour
     [Button("CheckToGo")]
     void CheckToGo()
     {
-        //if (WM.fishers.Count <= loadedFishers.Count)
+        if (WM.fishers.Count <= loadedFishers.Count)
         {
             EventManager.Publish(EventName.BoatGo);
         }
@@ -77,10 +84,12 @@ public class Boat : MonoBehaviour
     //BoatRetrunFinished -> 
     void WhenBoatReturned()
     {
+        onOcean = false;
         //배에 탄 사람들 운반하도록 시킴
         foreach (var fisher in loadedFishers)
         {
-            fisher.TryChangeState(CatcherStateType.ConveyState);
+            fisher.TryChangeState(CatcherStateType.CatcherConveyState);
+            fisher.transform.SetParent(null);
         }
 
         //배에 탄 사람들 비움
