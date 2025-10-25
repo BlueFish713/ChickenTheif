@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using DG.Tweening;
 using UnityEngine;
 
 public enum CashierStateType
@@ -19,14 +20,21 @@ public class Cashier : Worker
     CashierState nowState;
     public CashierStateType nowStateType;
     public float conveySpeed;
+    public float returnSpeed;
+    public float rushSpeed = 4;
+    public List<Catcher> firstRateCathcers = new List<Catcher>();
+
+    public FishLayout fishLayout;
+
+    public Ease moveEase = Ease.Linear;
 
     void Awake()
     {
-        EventManager.Subscribe(EventName.CallCashier, () =>
-        {
-            if (nowStateType == CashierStateType.CashierWaitState)
-                TryChangeState(CashierStateType.CashierGo2ChefState);
-        });
+        // EventManager.Subscribe(EventName.CallCashier, () =>
+        // {
+        //     if (nowStateType == CashierStateType.CashierWaitState)
+        //         TryChangeState(CashierStateType.CashierGo2ChefState);
+        // });
     }
     
     void Start()

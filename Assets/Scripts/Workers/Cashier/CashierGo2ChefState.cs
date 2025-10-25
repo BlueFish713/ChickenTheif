@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class CashierGo2ChefState : CashierState
 {
     Chef chef;
     int index = 0;
+    float _conveySpeed;
     public override void Handle(Cashier cashier)
     {
         base.Handle(cashier);
         index = 0;
+        _conveySpeed = _cashier.conveySpeed;
         Repeat();
     }
 
@@ -21,7 +22,8 @@ public class CashierGo2ChefState : CashierState
         {
             chef = WM.chefs[index];
             ReceiveTrimmedDatas(chef.trimmedDatas);
-            Tween t = _cashier.transform.DOMoveX(chef.transform.position.x, _cashier.conveySpeed);
+            Tween t = _cashier.transform.DOMoveX(chef.transform.position.x, _conveySpeed).SetEase(_cashier.moveEase).SetAutoKill();
+            _conveySpeed = 0.8f;
             t.OnComplete(Repeat);
             index++;
         }

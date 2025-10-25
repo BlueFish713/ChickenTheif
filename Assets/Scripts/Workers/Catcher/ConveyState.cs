@@ -1,15 +1,33 @@
 using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
+using NUnit.Framework.Constraints;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class CatcherConveyState : CatcherState
 {
     Chef chef;
+
     public override void Handle(Catcher catcher)
     {
         base.Handle(catcher);
-        _catcher.StartCoroutine(MoveToChef());
+        _catcher.StartCoroutine(HandleCoroutine());
+    }
+    
+    IEnumerator HandleCoroutine()
+    {
+        if (_catcher.hasFirstData)
+        {
+            EventManager.Publish(EventName.FirstRateCallCashier);
+            yield return new WaitUntil(() =>
+                !_catcher.hasFirstData);
+            _catcher.StartCoroutine(MoveToChef());
+        }
+        else
+        {
+            _catcher.StartCoroutine(MoveToChef());
+        }
     }
 
     IEnumerator MoveToChef()
@@ -24,7 +42,7 @@ public class CatcherConveyState : CatcherState
         if (!chef.targeted)
         {
             chef.Targeted(_catcher);
-            Tween t = _catcher.transform.DOMoveX(chef.transform.position.x, _catcher.conveySpeed);
+            Tween t = _catcher.transform.DOMoveX(chef.transform.position.x, _catcher.conveySpeed).SetEase(_catcher.moveEase).SetAutoKill();
             t.OnComplete(OnReachedChef);
         }
         else
@@ -40,7 +58,7 @@ public class CatcherConveyState : CatcherState
 
     void OnReachedChef()
     {
-        chef.RecieveUnTrimmedData(_catcher.untrimmedDatas);
+        chef.RecieveUnTrimmedData(in _catcher.untrimmedDatas);
         _catcher.fishLayout.UnLoadAll();
         _catcher.untrimmedDatas.Clear();
         _catcher.TryChangeState(CatcherStateType.CatcherReturnState);

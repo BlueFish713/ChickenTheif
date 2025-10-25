@@ -32,6 +32,80 @@ public class WorkerManager : MonoBehaviour
     [SerializeField, Space(5)] public Boat boat;
     [SerializeField, Space(5)] public Transform fisherSpawnPosition;
 
+    public bool chefCallQueued = false;
+    public List<Catcher> firstRateCathcers = new List<Catcher>();
+
+    void Awake()
+    {
+        chefCallQueued = false;
+        EventManager.Subscribe(EventName.CallCashier, () =>
+        {
+            chefCallQueued = true;
+        });
+        EventManager.Subscribe(EventName.FirstRateCallCashier, () =>
+        {
+            Debug.Log("FirstRateCallCashier");
+            foreach(var f in fishers)
+            {
+                if (f.hasFirstData && !firstRateCathcers.Contains(f))
+                {
+                    firstRateCathcers.Add(f);
+                }
+            }
+            foreach(var f in divers)
+            {
+                if (f.hasFirstData && !firstRateCathcers.Contains(f))
+                {
+                    firstRateCathcers.Add(f);
+                }
+            }
+        });
+
+        InvokeRepeating("WaitForChefCall", 0, 0.5f);
+        InvokeRepeating("WaitForCatchCall", 1, 0.5f);
+    }
+
+    void WaitForCatchCall()
+    {
+        Debug.Log("WaitForCatchCall");
+        if (firstRateCathcers.Count == 0) return;
+        foreach(var c in cashiers)
+        {
+            if (c.nowStateType == CashierStateType.CashierGo2CatcherState)
+            {
+                firstRateCathcers.Clear();
+                return;
+            }
+        }
+        foreach(var c in cashiers)
+        {
+            if (c.nowStateType == CashierStateType.CashierWaitState)
+            {
+                c.TryChangeState(CashierStateType.CashierGo2CatcherState);
+                foreach(var f in firstRateCathcers)
+                {
+                    c.firstRateCathcers.Add(f);
+                }
+                //
+                break;
+            }
+        }
+    }
+    void WaitForChefCall()
+    {
+        Debug.Log("WaitForChefCall");
+        if (!chefCallQueued) return;
+        foreach(var c in cashiers)
+        {
+            if (c.nowStateType == CashierStateType.CashierWaitState)
+            {
+                c.TryChangeState(CashierStateType.CashierGo2ChefState);
+                chefCallQueued = false;
+                break;
+            }
+        }
+    }
+
     [Button("CreateChef")]
     public void CreateChef()
     {

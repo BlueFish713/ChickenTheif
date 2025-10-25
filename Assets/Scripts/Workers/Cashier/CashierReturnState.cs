@@ -12,7 +12,7 @@ public class CashierReturnState : CashierState
 
     void MoveToSlot()
     {
-        Tween t = _cashier.transform.DOMoveX(_cashier._slot.transform.position.x, _cashier.conveySpeed);
+        Tween t = _cashier.transform.DOMoveX(_cashier._slot.transform.position.x, _cashier.returnSpeed);
         t.OnComplete(OnReturnedToSlot);
     }
 

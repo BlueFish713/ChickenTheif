@@ -47,6 +47,7 @@ MonoBehaviour:
   spacing: 1
   fishPrefab: {fileID: 5372490453312177160, guid: 08187fa357fcf7f4586a87a4fdb97c6a, type: 3}
   loadedGameObject: []
+  firstIndex: 
 --- !u!1 &5220128103211012420
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +154,10 @@ MonoBehaviour:
   catchPeriod: 2
   maxFishCount: 5
   untrimmedDatas: []
+  hasFirstData: 0
   fishLayout: {fileID: 4805782227640946037}
   nowStateType: 0
   conveySpeed: 4
+  firstDisplayPrefab: {fileID: 2027135397248946212, guid: 8235998602555de44833687b99699954, type: 3}
+  firstDisplay: {fileID: 0}
+  moveEase: 1

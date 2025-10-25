@@ -4,7 +4,7 @@ using UnityEngine;
 public class Chef : Worker
 {
     //손질된 수산물 List
-    public List<TrimmedData> trimmedDatas;
+    public List<TrimmedData> trimmedDatas = new List<TrimmedData>();
 
     //어떤 Catcher가 이 Chef를 향해 가고 있음을 표시
     public bool targeted = false;
@@ -22,10 +22,15 @@ public class Chef : Worker
     }
 
     //Catcher에 의해 호출됨. 손질되지 않은 수산물을 받음
-    public void RecieveUnTrimmedData(List<UntrimmedData> untrimmedDatas)
+    public void RecieveUnTrimmedData(in List<UntrimmedData> untrimmedDatas)
     {
         targeted = false;
-        StartCoroutine(Work(untrimmedDatas));
+        var untrimmedDatasCopy = new List<UntrimmedData>();
+        foreach (var ut in untrimmedDatas)
+        {
+            untrimmedDatasCopy.Add(ut);
+        }
+        StartCoroutine(Work(untrimmedDatasCopy));
     }
 
     //손질하기
@@ -34,7 +39,7 @@ public class Chef : Worker
         working = true;
         yield return new WaitForSeconds(workTime);
         working = false;
-        trimmedDatas = new List<TrimmedData>();
+        //trimmedDatas.Clear();
         foreach (var t in untrimmedDatas)
         {
             trimmedDatas.Add(Trim(t));

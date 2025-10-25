@@ -26,7 +26,7 @@ public class CatcherReturnState : CatcherState
         Debug.Log("CatcherReturnState MoveToSlot");
         yield return new WaitUntil(Wait);
         Debug.Log("CatcherReturnState WaitUntil Out");
-        Tween t = _catcher.transform.DOMoveX(_catcher._slot.transform.position.x, _catcher.conveySpeed);
+        Tween t = _catcher.transform.DOMoveX(_catcher._slot.transform.position.x, _catcher.conveySpeed).SetEase(_catcher.moveEase).SetAutoKill();
         t.OnComplete(OnReturnedToSlot);
     }
 
