@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -7,8 +8,11 @@ public class Boat : MonoBehaviour
 {
     public float period = 30; //배가 바다에 있는 시간
     public List<Fisher> loadedFishers = new List<Fisher>(); //배에 탄 어부 배열
-        
+
     WorkerManager WM;
+
+    [SerializeField] DOTweenAnimation GoAnimation;
+    [SerializeField] DOTweenAnimation ReturnAnimation;
 
     void Start()
     {
@@ -17,8 +21,18 @@ public class Boat : MonoBehaviour
 
     void Awake()
     {
-        //BoatGo 이벤트가 발생하면 GoCoroutine을 실행함
-        EventManager.Subscribe(EventName.BoatGo, () => StartCoroutine(GoCoroutine()));
+        //BoatGo 이벤트가 발생하면 GoCoroutine, 애니메이션을 실행함
+        EventManager.Subscribe(EventName.BoatGo, () =>
+        {
+            StartCoroutine(GoCoroutine());
+            GoAnimation.DORestart();
+        });
+
+        //BoatRetrunStart 이벤트가 발생하면 애니메이션을 실행함
+        EventManager.Subscribe(EventName.BoatGo, () =>
+        {
+            ReturnAnimation.DORestart();
+        });
 
         //BoatRetrunFinished 이벤트가 발생하면 WhenBoatReturned를 실행함
         EventManager.Subscribe(EventName.BoatRetrunFinished, WhenBoatReturned);
@@ -33,9 +47,10 @@ public class Boat : MonoBehaviour
     }
 
     //배 출발해도 되는지 체크 -> 정원이 맞으면 BoatGo 이벤트 호출
+    [Button("CheckToGo")]
     void CheckToGo()
     {
-        if (WM.fishers.Count <= loadedFishers.Count)
+        //if (WM.fishers.Count <= loadedFishers.Count)
         {
             EventManager.Publish(EventName.BoatGo);
         }
