@@ -41,6 +41,8 @@ public class CatcherConveyState : CatcherState
     void OnReachedChef()
     {
         chef.RecieveUnTrimmedData(_catcher.untrimmedDatas);
+        _catcher.fishLayout.UnLoadAll();
+        _catcher.untrimmedDatas.Clear();
         _catcher.TryChangeState(CatcherStateType.CatcherReturnState);
         chef = null;
     }

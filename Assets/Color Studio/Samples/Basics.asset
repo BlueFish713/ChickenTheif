@@ -16,6 +16,7 @@ MonoBehaviour:
   hueCount: 8
   shades: 6
   saturation: 1
+  lightness: 0.5
   minBrightness: 0
   maxBrightness: 1
   kelvin: 4000

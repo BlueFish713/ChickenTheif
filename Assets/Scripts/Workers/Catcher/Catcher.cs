@@ -19,6 +19,7 @@ public class Catcher : Worker
 
     //소지하고 있는 물고기(UntrimmedData) List
     public List<UntrimmedData> untrimmedDatas = new List<UntrimmedData>();
+    public FishLayout fishLayout;
 
     //Catcher의 상태
     CatcherState nowState;
@@ -63,8 +64,12 @@ public class Catcher : Worker
         //대충 Random이용해서 UntrimmedData 생성(구현 부탁)
         UntrimmedData caughtFish = new UntrimmedData();
 
+        caughtFish.fish = FishType.StarFish;
+        caughtFish.rate = RateType.Second;
+
         //잡은 물고기를 저장
         untrimmedDatas.Add(caughtFish);
+        fishLayout.Load(caughtFish);
     }
 
     // UntrimmedData CreateUntrimmedData()
