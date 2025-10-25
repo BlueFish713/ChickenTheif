@@ -7,12 +7,13 @@ using UnityEngine;
 public class Boat : MonoBehaviour
 {
     public float period = 30; //배가 바다에 있는 시간
+    public float moveX = 30;
+    public Ease inease = Ease.InCubic;
+    public Ease outease = Ease.OutCubic;
     public List<Fisher> loadedFishers = new List<Fisher>(); //배에 탄 어부 배열
+    float boatX = 0;
 
     WorkerManager WM;
-
-    [SerializeField] DOTweenAnimation GoAnimation;
-    [SerializeField] DOTweenAnimation ReturnAnimation;
 
     void Start()
     {
@@ -21,17 +22,18 @@ public class Boat : MonoBehaviour
 
     void Awake()
     {
+        boatX = transform.position.x;
         //BoatGo 이벤트가 발생하면 GoCoroutine, 애니메이션을 실행함
         EventManager.Subscribe(EventName.BoatGo, () =>
         {
             StartCoroutine(GoCoroutine());
-            GoAnimation.DORestart();
+            transform.DOMoveX(boatX+moveX, 5).SetEase(inease).SetAutoKill();
         });
 
         //BoatRetrunStart 이벤트가 발생하면 애니메이션을 실행함
-        EventManager.Subscribe(EventName.BoatGo, () =>
+        EventManager.Subscribe(EventName.BoatRetrunStart, () =>
         {
-            ReturnAnimation.DORestart();
+            transform.DOMoveX(boatX, 5).SetEase(outease).SetAutoKill();
         });
 
         //BoatRetrunFinished 이벤트가 발생하면 WhenBoatReturned를 실행함
