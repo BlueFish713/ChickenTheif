@@ -2,15 +2,9 @@ using UnityEngine;
 
 public class Worker : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected Slot _slot;
+    public void Assign(Slot slot)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _slot = slot;
     }
 }
