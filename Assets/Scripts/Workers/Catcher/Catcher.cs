@@ -33,12 +33,12 @@ public class Catcher : Worker
 
     void Update()
     {
-        nowState.Update();
+        if (nowState != null) nowState.Update();
     }
     
     void FixedUpdate()
     {
-        nowState.FixedUpdate();
+        if (nowState != null) nowState.FixedUpdate();
     }
 
     //외부에서 호출, 상태 바꾸기
@@ -47,7 +47,7 @@ public class Catcher : Worker
         nowState.Exit();
         nowStateType = state;
         nowState = ReflectionBase.CreateInstanceFromType(ReflectionBase.TypeFromEnum(nowStateType));
-        
+
     }
 
     //물고기 잡기
