@@ -4,11 +4,13 @@ using UnityEngine.UIElements;
 
 public class Cloud : MonoBehaviour
 {
-    float speed, scale;
+    float speed;
     public List<Sprite> sprite;
+    public SpeechBubble bubblePrefab;
+    SpeechBubble bubbleInstance;
     void Start()
     {
-        speed = Random.Range(0.005f, 0.01f);
+        speed = Random.Range(0.002f, 0.005f);
         // scale = Random.Range(10f, 20f);
         // transform.localScale = new Vector3(scale, scale, 1);
         // transform.position = new Vector3(Random.Range(-60f, -59f), Random.Range(10f, 20f), 0);
