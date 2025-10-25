@@ -1208,6 +1208,14 @@ MonoBehaviour:
   chefs: []
   fishers: []
   divers: []
+  cashierPrefab: {fileID: 0}
+  chefPrefab: {fileID: 0}
+  fisherPrefab: {fileID: 0}
+  diverPrefab: {fileID: 0}
+  cashierSlots: []
+  chefSlots: []
+  fisherSlots: []
+  diverSlots: []
 --- !u!4 &1422902740
 Transform:
   m_ObjectHideFlags: 0
@@ -1371,6 +1379,52 @@ Transform:
   - {fileID: 20748935}
   - {fileID: 668952521}
   - {fileID: 356503874}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1739021233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739021235}
+  - component: {fileID: 1739021234}
+  m_Layer: 0
+  m_Name: CustomerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1739021234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739021233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d790572722880fa429b4fa2be6910597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customerPrebfab: {fileID: 7608588300350890495, guid: ebd4ae6f66062284c9764cf226f15220, type: 3}
+  priceCallingRepeat: 3
+--- !u!4 &1739021235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739021233}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.46484, y: -2.99236, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1764297066
@@ -2341,3 +2395,4 @@ SceneRoots:
   - {fileID: 1727903981}
   - {fileID: 66120383}
   - {fileID: 1607280553}
+  - {fileID: 1739021235}

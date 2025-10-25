@@ -42,4 +42,9 @@ public class Cashier : Worker
 
     }
 
+    public void AuctionConfirm()
+    {
+        // 말풍선 띄우기
+        // 돈 벌기
+    }
 }
