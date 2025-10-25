@@ -10,6 +10,12 @@ public class CustomerManager : MonoBehaviour
     public GameObject customerPrebfab;
     private List<GameObject> customers = new List<GameObject>();
     public int priceCallingRepeat = 3;
+    private Repository repository;
+
+    void Start()
+    {
+        repository = SingletonManager.Get<Repository>();
+    }
 
     public void MakeCustomer()
     {
@@ -19,7 +25,7 @@ public class CustomerManager : MonoBehaviour
 
     void Auction(Cashier cashier, UntrimmedData data)
     {
-        int originalPrice = Repository.Instance.price[data.fish];
+        int originalPrice = repository.price[data.fish];
         float priceUp = UnityEngine.Random.Range(5f, 10f); // 가격 뻥튀기 배율
         int price = (int)(Math.Round(originalPrice * priceUp / 100f) * 100f); // xx00원 형태로 정리
         StartCoroutine(AuctionCoroutine(originalPrice, price, cashier));

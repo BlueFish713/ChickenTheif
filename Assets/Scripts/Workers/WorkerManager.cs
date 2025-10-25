@@ -61,7 +61,7 @@ public class WorkerManager : MonoBehaviour
         for (int i = chefs.Count - 1; i >= 0; i--)
         {
             if (chefs[i] == null) continue;
-            if (!chefs[i].working) return chefs[i];
+            if (!chefs[i].working && !chefs[i].targeted) return chefs[i];
         }
         return null;
     }

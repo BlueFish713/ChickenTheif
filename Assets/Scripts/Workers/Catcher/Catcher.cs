@@ -18,7 +18,7 @@ public class Catcher : Worker
     public int maxFishCount = 5;
 
     //소지하고 있는 물고기(UntrimmedData) List
-    List<UntrimmedData> untrimmedDatas = new List<UntrimmedData>();
+    public List<UntrimmedData> untrimmedDatas = new List<UntrimmedData>();
 
     //Catcher의 상태
     CatcherState nowState;
@@ -29,7 +29,7 @@ public class Catcher : Worker
 
     void Start()
     {
-        WM = SingletonManager.Get<WorkerManager>();
+        base.WM = SingletonManager.Get<WorkerManager>();
     }
 
     void Update()
@@ -65,6 +65,10 @@ public class Catcher : Worker
 
         //잡은 물고기를 저장
         untrimmedDatas.Add(caughtFish);
-        //
     }
+
+    // UntrimmedData CreateUntrimmedData()
+    // {
+        
+    // }
 }

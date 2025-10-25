@@ -14,13 +14,23 @@ public class CatcherConveyState : CatcherState
 
     IEnumerator MoveToChef()
     {
+        //동시 타겟팅을 방지하기 위해 약간의 시간 지연
+        yield return new WaitForSeconds(Random.Range(-0.2f, 0.2f));
         yield return new WaitUntil(() =>
         {
             chef = WM.GetAvailableChef();
             return chef != null;
         });
-        Tween t = _catcher.transform.DOMoveX(chef.transform.position.x, _catcher.conveySpeed);
-        t.OnComplete(OnReachedChef);
+        if (!chef.targeted)
+        {
+            chef.Targeted(_catcher);
+            Tween t = _catcher.transform.DOMoveX(chef.transform.position.x, _catcher.conveySpeed);
+            t.OnComplete(OnReachedChef);
+        }
+        else
+        {
+            _catcher.StartCoroutine(MoveToChef());
+        }
     }
 
     public override void Update()
@@ -30,6 +40,8 @@ public class CatcherConveyState : CatcherState
 
     void OnReachedChef()
     {
+        chef.RecieveUnTrimmedData(_catcher.untrimmedDatas);
         _catcher.TryChangeState(CatcherStateType.CatcherReturnState);
+        chef = null;
     }
 }
