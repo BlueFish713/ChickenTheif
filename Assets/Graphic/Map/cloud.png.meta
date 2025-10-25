@@ -1,34 +1,40 @@
 fileFormatVersion: 2
-guid: 14b9be16a04481f47a40c90c5c90a06d
+guid: 2561585b17631c0409d8d459b8eb5249
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -592364184128727173
-    second: sea_structure-front_0
+      213: -8214156008985578212
+    second: cloude_0
   - first:
-      213: 568582836405160445
-    second: sea_structure-front_1
+      213: -2080629028707347123
+    second: cloude_1
   - first:
-      213: -1674766056876575123
-    second: sea_structure-front_2
+      213: 5655838507011623076
+    second: cloude_2
   - first:
-      213: 6730945621504855147
-    second: sea_structure-front_3
+      213: 8677055882099986990
+    second: cloude_3
   - first:
-      213: -4973942628816375453
-    second: sea_structure-front_4
+      213: -7124099022726955002
+    second: cloude_4
   - first:
-      213: -6948720837523559932
-    second: sea_structure-front_5
+      213: -959855222081334790
+    second: cloude_5
   - first:
-      213: -1464349118740647809
-    second: sea_structure-front_6
+      213: 2517282147795156604
+    second: cloude_6
   - first:
-      213: 4364215383775288446
-    second: sea_structure-front_7
+      213: -8291946993441798122
+    second: cloude_7
   - first:
-      213: -5084163290514651758
-    second: sea_structure-front_8
+      213: -8894385877959443523
+    second: cloude_8
+  - first:
+      213: -5729397904533459768
+    second: cloude_9
+  - first:
+      213: 1654754576456993568
+    second: cloude_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +76,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -124,199 +130,259 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sea_structure-front_0
+      name: cloude_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 84
-        width: 9
-        height: 12
+        x: 9
+        y: 81
+        width: 56
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b77d75bb9ef77c7f0800000000000000
-      internalID: -592364184128727173
+      spriteID: c1536ca51a4710e80800000000000000
+      internalID: -8214156008985578212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sea_structure-front_1
+      name: cloude_1
       rect:
         serializedVersion: 2
-        x: 56
-        y: 41
-        width: 206
-        height: 67
+        x: 76
+        y: 81
+        width: 87
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: df94055c31304e700800000000000000
-      internalID: 568582836405160445
+      spriteID: d45588a0cee1023e0800000000000000
+      internalID: -2080629028707347123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sea_structure-front_2
+      name: cloude_2
       rect:
         serializedVersion: 2
-        x: 2
-        y: 39
-        width: 21
-        height: 6
+        x: 173
+        y: 81
+        width: 71
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d667df1052902c8e0800000000000000
-      internalID: -1674766056876575123
+      spriteID: 4a8476df7239d7e40800000000000000
+      internalID: 5655838507011623076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sea_structure-front_3
+      name: cloude_3
       rect:
         serializedVersion: 2
-        x: 23
-        y: 39
+        x: 51
+        y: 60
         width: 22
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b6c8444716f196d50800000000000000
-      internalID: 6730945621504855147
+      spriteID: e2298cc0a581b6870800000000000000
+      internalID: 8677055882099986990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sea_structure-front_4
+      name: cloude_4
       rect:
         serializedVersion: 2
-        x: 45
-        y: 39
-        width: 27
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3613a3c388109fab0800000000000000
-      internalID: -4973942628816375453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_structure-front_5
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 39
-        width: 21
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 40aad04d63f219f90800000000000000
-      internalID: -6948720837523559932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_structure-front_6
-      rect:
-        serializedVersion: 2
-        x: 94
-        y: 39
-        width: 27
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f70be462c369dabe0800000000000000
-      internalID: -1464349118740647809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_structure-front_7
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 40
-        width: 75
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7c9839d4cec09c30800000000000000
-      internalID: 4364215383775288446
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sea_structure-front_8
-      rect:
-        serializedVersion: 2
-        x: 327
-        y: 41
-        width: 84
+        x: 95
+        y: 55
+        width: 35
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2950bc0ac6c6179b0800000000000000
-      internalID: -5084163290514651758
+      spriteID: 60007a51fad122d90800000000000000
+      internalID: -7124099022726955002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloude_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 65
+        width: 26
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1d904d2c8eda2f0800000000000000
+      internalID: -959855222081334790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloude_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 37
+        width: 54
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -27, y: 6}
+        - {x: -27, y: -15}
+        - {x: 27, y: -15}
+        - {x: 27, y: 15}
+        - {x: -18, y: 15}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e33cab6ce2fe220800000000000000
+      internalID: 2517282147795156604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloude_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 43
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618888f54261dec80800000000000000
+      internalID: -8291946993441798122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloude_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 7
+        width: 107
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -5.5, y: 22.5}
+        - {x: -53.5, y: -7.5}
+        - {x: -53.5, y: -22.5}
+        - {x: 53.5, y: -22.5}
+        - {x: 53.5, y: -1.5}
+        - {x: 31.5, y: 22.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbf9f02b2bc09480800000000000000
+      internalID: -8894385877959443523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloude_9
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 34
+        width: 64
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline:
+      - - {x: -32, y: 0}
+        - {x: -32, y: -12}
+        - {x: 32, y: -12}
+        - {x: 32, y: 11}
+        - {x: -6, y: 12}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc6a6326f61d70b0800000000000000
+      internalID: -5729397904533459768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloude_10
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 7
+        width: 115
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bcb20258ed6f610800000000000000
+      internalID: 1654754576456993568
       vertices: []
       indices: 
       edges: []
@@ -325,7 +391,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 429ead0a842208d4ca7550f8ec62f11a
     internalID: 0
     vertices: []
     indices: 
@@ -333,17 +399,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      sea_structure-front_0: -592364184128727173
-      sea_structure-front_1: 568582836405160445
-      sea_structure-front_2: -1674766056876575123
-      sea_structure-front_3: 6730945621504855147
-      sea_structure-front_4: -4973942628816375453
-      sea_structure-front_5: -6948720837523559932
-      sea_structure-front_6: -1464349118740647809
-      sea_structure-front_7: 4364215383775288446
-      sea_structure-front_8: -5084163290514651758
+      cloude_0: -8214156008985578212
+      cloude_1: -2080629028707347123
+      cloude_10: 1654754576456993568
+      cloude_2: 5655838507011623076
+      cloude_3: 8677055882099986990
+      cloude_4: -7124099022726955002
+      cloude_5: -959855222081334790
+      cloude_6: 2517282147795156604
+      cloude_7: -8291946993441798122
+      cloude_8: -8894385877959443523
+      cloude_9: -5729397904533459768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
