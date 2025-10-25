@@ -8,5 +8,5 @@ public class CashierGo2CatcherState : CashierState
     {
         base.Handle(cashier);
     }
-
+    
 }

@@ -52,10 +52,4 @@ public class Cashier : Worker
         nowState = ReflectionBase.CreateInstanceFromType(ReflectionBase.TypeFromEnum(nowStateType));
         nowState.Handle(this);
     }
-
-    public void AuctionConfirm()
-    {
-        // 말풍선 띄우기
-        // 돈 벌기
-    }
 }
