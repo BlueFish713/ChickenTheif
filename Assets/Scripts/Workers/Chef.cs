@@ -4,7 +4,7 @@ using UnityEngine;
 public class Chef : Worker
 {
     //손질된 수산물 List
-    [SerializeField] private List<TrimmedData> trimmedDatas;
+    public List<TrimmedData> trimmedDatas;
 
     //어떤 Catcher가 이 Chef를 향해 가고 있음을 표시
     public bool targeted = false;
@@ -39,6 +39,7 @@ public class Chef : Worker
         {
             trimmedDatas.Add(Trim(t));
         }
+        EventManager.Publish(EventName.CallCashier);
     }
     
     //손질되지 않은 수산물을 손질된 수산물로 바꿈
