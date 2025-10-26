@@ -22,7 +22,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             GameObject cloud = Instantiate(cloudPrefab);
             Cloud cloudCode = cloud.GetComponent<Cloud>();
             cloudCode.init(-60f, Random.Range(10f, 20f));
-            yield return new WaitForSeconds(15);
+            yield return new WaitForSeconds(15); // 15
         }
     }
 }
