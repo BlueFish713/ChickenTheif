@@ -50,15 +50,16 @@ public class Catcher : Worker
     void Start()
     {
         base.WM = SingletonManager.Get<WorkerManager>();
-        EventManager.Subscribe(EventName.BoatRetrunStart, () =>
-        {
-            if (firstDisplay != null)
-                firstDisplay.transform.localPosition = transform.localPosition;
-        });
+        // EventManager.Subscribe(EventName.BoatRetrunStart, () =>
+        // {
+        //     if (firstDisplay != null)
+        //         firstDisplay.transform.localPosition = transform.localPosition;
+        // });
         EventManager.Subscribe(EventName.BoatRetrunFinished, () =>
         {
+            //transform.SetParent(null);
             if (firstDisplay != null)
-                firstDisplay.transform.localPosition = transform.localPosition;
+                firstDisplay.transform.localPosition = transform.position;
         });
     }
 
