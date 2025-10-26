@@ -85,6 +85,7 @@ public class Catcher : Worker
     //물고기 잡기
     public virtual void Catch()
     {
+        //GetComponent<Animator>().Play("Down");
         //만약 최대 소지 개수에 도달해있으면 return;
         if (untrimmedDatas.Count >= maxFishCount)
         {
@@ -117,7 +118,7 @@ public class Catcher : Worker
             untrimmedDatas.Add(caughtFish);
             fishLayout.Load(caughtFish);
         }
-
-        //잡은 물고기를 저장
+        
+        //GetComponent<Animator>().Play("Up");
     }
 }

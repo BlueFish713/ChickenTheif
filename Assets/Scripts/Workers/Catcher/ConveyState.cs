@@ -22,6 +22,7 @@ public class CatcherConveyState : CatcherState
             EventManager.Publish(EventName.FirstRateCallCashier);
             yield return new WaitUntil(() =>
                 !_catcher.hasFirstData);
+            _catcher.GetComponent<Animator>().Play("Walk");
             _catcher.StartCoroutine(MoveToChef());
         }
         else
@@ -37,11 +38,13 @@ public class CatcherConveyState : CatcherState
         yield return new WaitUntil(() =>
         {
             chef = WM.GetAvailableChef();
+            _catcher.GetComponent<Animator>().Play("Wait");
             return chef != null;
         });
         if (!chef.targeted)
         {
             chef.Targeted(_catcher);
+            _catcher.GetComponent<Animator>().Play("Walk");
             Tween t = _catcher.transform.DOMoveX(chef.transform.position.x, MoveBase.GetDuration(_catcher.transform.position, chef.transform.position, _catcher.conveySpeed)).SetEase(_catcher.moveEase).SetAutoKill();
             t.OnComplete(OnReachedChef);
         }

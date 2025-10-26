@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 9cbe14528e1787f4caa278ca93730db2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8021267305113120146
+    second: sea_woman_up-Sheet_0
+  - first:
+      213: -1263036647483944041
+    second: sea_woman_up-Sheet_1
+  - first:
+      213: -5258974087508392365
+    second: sea_woman_up-Sheet_2
+  - first:
+      213: 3883861914548771471
+    second: sea_woman_up-Sheet_3
+  - first:
+      213: 1342443008861467066
+    second: sea_woman_up-Sheet_4
+  - first:
+      213: 6415857682292375292
+    second: sea_woman_up-Sheet_5
+  - first:
+      213: 9208237831262220180
+    second: sea_woman_up-Sheet_6
+  - first:
+      213: -4980252631730288894
+    second: sea_woman_up-Sheet_7
+  - first:
+      213: -3363673728537237433
+    second: sea_woman_up-Sheet_8
+  - first:
+      213: 8847885134537246249
+    second: sea_woman_up-Sheet_9
+  - first:
+      213: -3455560093767873906
+    second: sea_woman_up-Sheet_10
+  - first:
+      213: -1310869149122072623
+    second: sea_woman_up-Sheet_11
+  - first:
+      213: -1244088059437582945
+    second: sea_woman_up-Sheet_12
+  - first:
+      213: 5242669771231653762
+    second: sea_woman_up-Sheet_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 3
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e62174e62ebbea090800000000000000
+      internalID: -8021267305113120146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 3
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7935b686cdac87ee0800000000000000
+      internalID: -1263036647483944041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 3
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356041f3eee5407b0800000000000000
+      internalID: -5258974087508392365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 3
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a195d65df36e530800000000000000
+      internalID: 3883861914548771471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 5
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab1f462ddc051a210800000000000000
+      internalID: 1342443008861467066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 5
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe7f72c194b90950800000000000000
+      internalID: 6415857682292375292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 5
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49fa2bb258b3acf70800000000000000
+      internalID: 9208237831262220180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 5
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20703023e9692eab0800000000000000
+      internalID: -4980252631730288894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 7
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748693eb094d151d0800000000000000
+      internalID: -3363673728537237433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 6
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9264d89d6a00aca70800000000000000
+      internalID: 8847885134537246249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 4
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a43fe27626b00d0800000000000000
+      internalID: -3455560093767873906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 3
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df6f83447bdecde0800000000000000
+      internalID: -1310869149122072623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 3
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f95faeb508c1cbee0800000000000000
+      internalID: -1244088059437582945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_up-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 3
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28fe0fc4164b1c840800000000000000
+      internalID: 5242669771231653762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sea_woman_up-Sheet_0: -8021267305113120146
+      sea_woman_up-Sheet_1: -1263036647483944041
+      sea_woman_up-Sheet_10: -3455560093767873906
+      sea_woman_up-Sheet_11: -1310869149122072623
+      sea_woman_up-Sheet_12: -1244088059437582945
+      sea_woman_up-Sheet_13: 5242669771231653762
+      sea_woman_up-Sheet_2: -5258974087508392365
+      sea_woman_up-Sheet_3: 3883861914548771471
+      sea_woman_up-Sheet_4: 1342443008861467066
+      sea_woman_up-Sheet_5: 6415857682292375292
+      sea_woman_up-Sheet_6: 9208237831262220180
+      sea_woman_up-Sheet_7: -4980252631730288894
+      sea_woman_up-Sheet_8: -3363673728537237433
+      sea_woman_up-Sheet_9: 8847885134537246249
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

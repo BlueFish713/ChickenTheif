@@ -52,4 +52,10 @@ public class CashierGo2CatcherState : CashierState
             _cashier.untrimmedDatas.Add(data);
         }
     }
+
+    
+    public override void Update()
+    {
+        _cashier.GetComponent<Animator>().Play("CashierWalk");
+    }
 }

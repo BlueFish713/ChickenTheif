@@ -33,6 +33,7 @@ public class CatcherReturnState : CatcherState
     public override void Update()
     {
         base.Update();
+            _catcher.GetComponent<Animator>().Play("Walk");
         //대충 건내주기
         //_catcher.TryChangeState(CatcherStateType.CatcherReturnState);
     }

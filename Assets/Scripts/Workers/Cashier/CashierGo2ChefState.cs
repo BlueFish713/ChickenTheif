@@ -48,4 +48,8 @@ public class CashierGo2ChefState : CashierState
             _cashier.fishLayout.Load(data);
         }
     }
+    public override void Update()
+    {
+        _cashier.GetComponent<Animator>().Play("CashierWalk");
+    }
 }

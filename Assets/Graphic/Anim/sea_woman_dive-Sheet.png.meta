@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: f0c5ad5c22dc0ab4884ebb9d7f83133f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2965754198689485090
+    second: sea_woman_dive-Sheet_0
+  - first:
+      213: 8798471332358801782
+    second: sea_woman_dive-Sheet_1
+  - first:
+      213: 3174768268128788532
+    second: sea_woman_dive-Sheet_2
+  - first:
+      213: 3257156555699434950
+    second: sea_woman_dive-Sheet_3
+  - first:
+      213: 7648472204050883711
+    second: sea_woman_dive-Sheet_4
+  - first:
+      213: 8436098810124510076
+    second: sea_woman_dive-Sheet_5
+  - first:
+      213: 5084671271793123561
+    second: sea_woman_dive-Sheet_6
+  - first:
+      213: -7795645676911739330
+    second: sea_woman_dive-Sheet_7
+  - first:
+      213: -3956758947492787784
+    second: sea_woman_dive-Sheet_8
+  - first:
+      213: 6521434890044599170
+    second: sea_woman_dive-Sheet_9
+  - first:
+      213: -4879266992235380934
+    second: sea_woman_dive-Sheet_10
+  - first:
+      213: -2993651105219649673
+    second: sea_woman_dive-Sheet_11
+  - first:
+      213: 2325370827497049298
+    second: sea_woman_dive-Sheet_12
+  - first:
+      213: -5964134144327161005
+    second: sea_woman_dive-Sheet_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 3
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede6dfff44687d6d0800000000000000
+      internalID: -2965754198689485090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 3
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67944bb7f037a1a70800000000000000
+      internalID: 8798471332358801782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 3
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430aff15bea0f0c20800000000000000
+      internalID: 3174768268128788532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 4
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c5bc4851aeb33d20800000000000000
+      internalID: 3257156555699434950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 6
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74e6ec32f4d42a60800000000000000
+      internalID: 7648472204050883711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 7
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c732193eb2b031570800000000000000
+      internalID: 8436098810124510076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 5
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0ecdaf491609640800000000000000
+      internalID: 5084671271793123561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 5
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ebdd85f8d40d390800000000000000
+      internalID: -7795645676911739330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 5
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b908d873b4c619c0800000000000000
+      internalID: -3956758947492787784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 5
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b62fefa7ac08a50800000000000000
+      internalID: 6521434890044599170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 3
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f7583a58c594cb0800000000000000
+      internalID: -4879266992235380934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 3
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f5deb4e2a6476d0800000000000000
+      internalID: -2993651105219649673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc84008270654020800000000000000
+      internalID: 2325370827497049298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sea_woman_dive-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 3
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35be99658932b3da0800000000000000
+      internalID: -5964134144327161005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sea_woman_dive-Sheet_0: -2965754198689485090
+      sea_woman_dive-Sheet_1: 8798471332358801782
+      sea_woman_dive-Sheet_10: -4879266992235380934
+      sea_woman_dive-Sheet_11: -2993651105219649673
+      sea_woman_dive-Sheet_12: 2325370827497049298
+      sea_woman_dive-Sheet_13: -5964134144327161005
+      sea_woman_dive-Sheet_2: 3174768268128788532
+      sea_woman_dive-Sheet_3: 3257156555699434950
+      sea_woman_dive-Sheet_4: 7648472204050883711
+      sea_woman_dive-Sheet_5: 8436098810124510076
+      sea_woman_dive-Sheet_6: 5084671271793123561
+      sea_woman_dive-Sheet_7: -7795645676911739330
+      sea_woman_dive-Sheet_8: -3956758947492787784
+      sea_woman_dive-Sheet_9: 6521434890044599170
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

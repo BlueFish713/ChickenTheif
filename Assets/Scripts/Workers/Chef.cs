@@ -37,6 +37,7 @@ public class Chef : Worker
     System.Collections.IEnumerator Work(List<UntrimmedData> untrimmedDatas)
     {
         working = true;
+        GetComponent<Animator>().SetTrigger("A");
         yield return new WaitForSeconds(workTime);
         working = false;
         //trimmedDatas.Clear();

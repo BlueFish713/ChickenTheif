@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: c59d943bd2287d24cb8d3cbb5610093c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9000081844578489891
+    second: killer_killing-Sheet_0
+  - first:
+      213: -5639475362399131718
+    second: killer_killing-Sheet_1
+  - first:
+      213: -4397005765825373150
+    second: killer_killing-Sheet_2
+  - first:
+      213: -3761629337417782920
+    second: killer_killing-Sheet_3
+  - first:
+      213: 6080558178500363600
+    second: killer_killing-Sheet_4
+  - first:
+      213: 3943909090173782845
+    second: killer_killing-Sheet_5
+  - first:
+      213: -1288815343055853394
+    second: killer_killing-Sheet_6
+  - first:
+      213: 8646372849874382265
+    second: killer_killing-Sheet_7
+  - first:
+      213: -5622444542381748803
+    second: killer_killing-Sheet_8
+  - first:
+      213: 7553386269372864481
+    second: killer_killing-Sheet_9
+  - first:
+      213: 8040886904166568765
+    second: killer_killing-Sheet_10
+  - first:
+      213: -1681535189328348623
+    second: killer_killing-Sheet_11
+  - first:
+      213: 7245213071842997344
+    second: killer_killing-Sheet_12
+  - first:
+      213: 1682874168975266600
+    second: killer_killing-Sheet_13
+  - first:
+      213: -5581798396971246631
+    second: killer_killing-Sheet_14
+  - first:
+      213: -2967984688799731314
+    second: killer_killing-Sheet_15
+  - first:
+      213: -6008475025878562406
+    second: killer_killing-Sheet_16
+  - first:
+      213: 3341757852124432924
+    second: killer_killing-Sheet_17
+  - first:
+      213: -6935103975352679381
+    second: killer_killing-Sheet_18
+  - first:
+      213: -366534500818672566
+    second: killer_killing-Sheet_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: killer_killing-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd9e4703f39491380800000000000000
+      internalID: -9000081844578489891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 3
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7e1a0890f8cb1b0800000000000000
+      internalID: -5639475362399131718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 3
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c52a46d82baf2c0800000000000000
+      internalID: -4397005765825373150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 3
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 879668e2c020ccbc0800000000000000
+      internalID: -3761629337417782920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 3
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0554c99727b726450800000000000000
+      internalID: 6080558178500363600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 3
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b0e3afb649bb630800000000000000
+      internalID: 3943909090173782845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 3
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea8251026453d1ee0800000000000000
+      internalID: -1288815343055853394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 3
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd2858eb461ef770800000000000000
+      internalID: 8646372849874382265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 3
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd800a4a7019f1b0800000000000000
+      internalID: -5622444542381748803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 3
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7584ddac403d860800000000000000
+      internalID: 7553386269372864481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 3
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3350f17908f69f60800000000000000
+      internalID: 8040886904166568765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 3
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ab3ca87acf9a8e0800000000000000
+      internalID: -1681535189328348623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 3
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064f73de6ea2c8460800000000000000
+      internalID: 7245213071842997344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 3
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8239373f325ca5710800000000000000
+      internalID: 1682874168975266600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 3
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db1fac7ee77982b0800000000000000
+      internalID: -5581798396971246631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 3
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e813b4d86a99fc6d0800000000000000
+      internalID: -2967984688799731314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 3
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99c3b85ccb9d9ca0800000000000000
+      internalID: -6008475025878562406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 3
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1acf35af0f406e20800000000000000
+      internalID: 3341757852124432924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 3
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2444bc9daf81cf90800000000000000
+      internalID: -6935103975352679381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: killer_killing-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 3
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4427c040dec9eaf0800000000000000
+      internalID: -366534500818672566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      killer_killing-Sheet_0: -9000081844578489891
+      killer_killing-Sheet_1: -5639475362399131718
+      killer_killing-Sheet_10: 8040886904166568765
+      killer_killing-Sheet_11: -1681535189328348623
+      killer_killing-Sheet_12: 7245213071842997344
+      killer_killing-Sheet_13: 1682874168975266600
+      killer_killing-Sheet_14: -5581798396971246631
+      killer_killing-Sheet_15: -2967984688799731314
+      killer_killing-Sheet_16: -6008475025878562406
+      killer_killing-Sheet_17: 3341757852124432924
+      killer_killing-Sheet_18: -6935103975352679381
+      killer_killing-Sheet_19: -366534500818672566
+      killer_killing-Sheet_2: -4397005765825373150
+      killer_killing-Sheet_3: -3761629337417782920
+      killer_killing-Sheet_4: 6080558178500363600
+      killer_killing-Sheet_5: 3943909090173782845
+      killer_killing-Sheet_6: -1288815343055853394
+      killer_killing-Sheet_7: 8646372849874382265
+      killer_killing-Sheet_8: -5622444542381748803
+      killer_killing-Sheet_9: 7553386269372864481
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -20,4 +20,8 @@ public class CashierReturnState : CashierState
     {
         _cashier.TryChangeState(CashierStateType.CashierWaitState);
     }
+    public override void Update()
+    {
+        _cashier.GetComponent<Animator>().Play("CashierWalk");
+    }
 }
