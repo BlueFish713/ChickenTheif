@@ -6,16 +6,17 @@ public class Cloud : MonoBehaviour
 {
     float speed;
     public List<Sprite> sprite;
-    public SpeechBubble bubblePrefab;
-    SpeechBubble bubbleInstance;
+    // public SpeechBubble bubblePrefab;
+    // SpeechBubble bubbleInstance;
     void Start()
     {
         speed = Random.Range(0.002f, 0.005f);
-        // scale = Random.Range(10f, 20f);
-        // transform.localScale = new Vector3(scale, scale, 1);
-        // transform.position = new Vector3(Random.Range(-60f, -59f), Random.Range(10f, 20f), 0);
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         sr.sprite = sprite[Random.Range(0, sprite.Count)];
+
+        // bubbleInstance = Instantiate(bubblePrefab);
+        // bubbleInstance.Setup(transform);
+        // bubbleInstance.Show("ABCDEFGHIJKLMNOPQRSTUVWXYZ".Substring(0, Random.Range(1,24)));
     }
     public void init(float x, float y)
     {
