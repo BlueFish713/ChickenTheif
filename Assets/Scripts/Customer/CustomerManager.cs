@@ -32,6 +32,7 @@ public class CustomerManager : MonoBehaviour
             {
                 customers.Add(customer);
                 customerSlots[index].Assign(component);
+                component.Wait();
             }
             else return;
         }
