@@ -8,11 +8,30 @@ public class Repository : MonoBehaviour // 싱글톤
 {
     //public static Repository Instance { get; private set; }
 
-    [SerializedDictionary("FishType", "Price")]
-    public SerializedDictionary<FishType, int> price = new SerializedDictionary<FishType, int>
+    // [SerializedDictionary("FishType", "Price")]
+    public Dictionary<FishType, int> price = new Dictionary<FishType, int>
     {
-        {FishType.StarFish, 1000},
-        {FishType.BlueFish, 2000}
+        {FishType.BaekSangARi, 50000}, 
+        {FishType.BaJiRak, 18000},
+        {FishType.BokEo, 4500},
+        {FishType.DaeGu, 15000},
+        {FishType.GarChi, 25000},
+        {FishType.GaRiBi, 6000},
+        {FishType.GoDeungEo, 10000},
+        {FishType.GwangEo, 35000},
+        {FishType.HaePaRi, 2000},
+        {FishType.HaeSam, 45000},
+        {FishType.JanFish, 1000},
+        {FishType.JangEo, 26000},
+        {FishType.JeonBok, 4600},
+        {FishType.JeonEo, 2300},
+        {FishType.KiJoGae, 12000},
+        {FishType.MunEo, 18000},
+        {FishType.NakJi, 22000},
+        {FishType.OJingEo, 15000},
+        {FishType.OkDom, 10000},
+        {FishType.SeongGe, 2500 }
+        
     };
     // void Awake()
     // {

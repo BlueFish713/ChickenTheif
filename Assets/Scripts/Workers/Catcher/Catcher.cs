@@ -96,7 +96,7 @@ public class Catcher : Worker
         int rand = (int)UnityEngine.Random.Range(1, 5);
         if (rand == 3 && !hasFirstData)
         {
-            caughtFish.fish = FishType.BlueFish;
+            caughtFish.fish = FishType.GoDeungEo;
             caughtFish.rate = RateType.First;
 
             firstData = caughtFish;
@@ -109,7 +109,7 @@ public class Catcher : Worker
         }
         else
         {
-            caughtFish.fish = FishType.StarFish;
+            caughtFish.fish = FishType.MunEo;
             caughtFish.rate = RateType.Second;
 
             untrimmedDatas.Add(caughtFish);

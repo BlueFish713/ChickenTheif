@@ -345,6 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 30
+  night: 0
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3264,12 +3265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b5a42cc414d014488bbd9d021278ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price:
-    _serializedList:
-    - Key: 0
-      Value: 1000
-    - Key: 1
-      Value: 2000
 --- !u!4 &1303379534
 Transform:
   m_ObjectHideFlags: 0
