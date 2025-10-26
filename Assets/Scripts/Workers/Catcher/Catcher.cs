@@ -50,6 +50,16 @@ public class Catcher : Worker
     void Start()
     {
         base.WM = SingletonManager.Get<WorkerManager>();
+        EventManager.Subscribe(EventName.BoatRetrunStart, () =>
+        {
+            if (firstDisplay != null)
+                firstDisplay.transform.localPosition = Vector2.zero;
+        });
+        EventManager.Subscribe(EventName.BoatRetrunFinished, () =>
+        {
+            if (firstDisplay != null)
+                firstDisplay.transform.localPosition = Vector2.zero;
+        });
     }
 
     void Update()
@@ -93,7 +103,8 @@ public class Catcher : Worker
             hasFirstData = true;
 
             firstDisplay = Instantiate(firstDisplayPrefab);
-            firstDisplay.transform.position = transform.position;
+            firstDisplay.transform.SetParent(transform);
+            firstDisplay.transform.localPosition = Vector2.zero;
             firstDisplay.GetComponent<SpriteRenderer>().sprite = SingletonManager.Get<FishImageRepository>().fishImages[caughtFish.fish];
         }
         else

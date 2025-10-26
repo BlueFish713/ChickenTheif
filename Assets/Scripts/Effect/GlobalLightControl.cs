@@ -5,6 +5,8 @@ using UnityEngine;
 public class GlobalLightControl : MonoBehaviour
 {
     public float duration = 5f;
+    public bool night;
+    bool prevNight;
 
     [SerializeField] private Gradient gradient;
     private UnityEngine.Rendering.Universal.Light2D _light;
@@ -25,8 +27,15 @@ public class GlobalLightControl : MonoBehaviour
         var percentage = Mathf.Sin(timeElapsed / duration * Mathf.PI * 2) * 0.5f + 0.5f;
         // Clamp the percentage to be between 0 and 1
         percentage = Mathf.Clamp01(percentage);
+        night = percentage > 0.7f;
+        if(night != prevNight)
+        {
+            EventManager.Publish(EventName.DayChanged);
+        }
 
         _light.color = gradient.Evaluate(percentage);
+
+        prevNight = night;
     }
 }
 

@@ -6,7 +6,7 @@ public class CashierWaitState : CashierState
         
         if (_cashier.untrimmedDatas.Count != 0)
         {
-            //_cashier.TryChangeState(CashierStateType.CashierAuctionState);
+            _cashier.TryChangeState(CashierStateType.CashierAuctionState);
         }
         else if (_cashier.trimmedDatas.Count != 0)
         {

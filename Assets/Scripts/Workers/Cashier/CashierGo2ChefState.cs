@@ -21,11 +21,16 @@ public class CashierGo2ChefState : CashierState
         if (index < WM.chefs.Count)
         {
             chef = WM.chefs[index];
-            ReceiveTrimmedDatas(chef.trimmedDatas);
-            Tween t = _cashier.transform.DOMoveX(chef.transform.position.x, _conveySpeed).SetEase(_cashier.moveEase).SetAutoKill();
             _conveySpeed = 0.8f;
-            t.OnComplete(Repeat);
             index++;
+            Tween t = _cashier.transform.DOMoveX(chef.transform.position.x, MoveBase.GetDuration(_cashier.transform.position, chef.transform.position, _conveySpeed)).SetEase(_cashier.moveEase).SetAutoKill();
+
+            t.OnComplete(() =>
+            {
+                ReceiveTrimmedDatas(chef.trimmedDatas);
+                chef.trimmedDatas.Clear();
+                Repeat(); 
+            });
         }
         else
         {
@@ -41,6 +46,7 @@ public class CashierGo2ChefState : CashierState
             data.fish = fish.fish;
             data.rate = fish.rate;
             _cashier.trimmedDatas.Add(data);
+            _cashier.fishLayout.Load(data);
         }
     }
 }

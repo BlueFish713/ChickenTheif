@@ -11,13 +11,17 @@ public class CashierSellState : CashierState
 
     IEnumerator Sell()
     {
+        _cashier.trimmedDatas.Reverse();
         foreach (TrimmedData data in _cashier.trimmedDatas)
         {
             int price = SingletonManager.Get<Repository>().price[data.fish];
+            _cashier.fishLayout.UnLoad();
             // 돈 벌기
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
         }
         _cashier.trimmedDatas.Clear();
+
+        SingletonManager.Get<CustomerManager>().NextCustomer();
 
         _cashier.TryChangeState(CashierStateType.CashierWaitState);
     }

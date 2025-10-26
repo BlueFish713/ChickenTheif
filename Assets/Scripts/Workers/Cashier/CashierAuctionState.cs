@@ -23,8 +23,10 @@ public class CashierAuctionState : CashierState
 
     IEnumerator AuctionCoroutine(int originalPrice, int price)
     {
-        CustomerManager customManagerCode = customManager.GetComponent<CustomerManager>();
+        CustomerManager customManagerCode = SingletonManager.Get<CustomerManager>();
         List<GameObject> customers = customManagerCode.customers;
+
+        yield return new WaitForSeconds(0.5f);
 
         for (int i = 0; i < 4; i++)
         {
@@ -38,6 +40,7 @@ public class CashierAuctionState : CashierState
 
         // 낙찰 말풍선 띄우기
         // 돈 벌기
-        _cashier.untrimmedDatas.RemoveAt(0);
+        _cashier.untrimmedDatas.Clear();
+        _cashier.TryChangeState(CashierStateType.CashierWaitState);
     }
 }

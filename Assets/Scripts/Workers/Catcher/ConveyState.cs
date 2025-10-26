@@ -42,7 +42,7 @@ public class CatcherConveyState : CatcherState
         if (!chef.targeted)
         {
             chef.Targeted(_catcher);
-            Tween t = _catcher.transform.DOMoveX(chef.transform.position.x, _catcher.conveySpeed).SetEase(_catcher.moveEase).SetAutoKill();
+            Tween t = _catcher.transform.DOMoveX(chef.transform.position.x, MoveBase.GetDuration(_catcher.transform.position, chef.transform.position, _catcher.conveySpeed)).SetEase(_catcher.moveEase).SetAutoKill();
             t.OnComplete(OnReachedChef);
         }
         else

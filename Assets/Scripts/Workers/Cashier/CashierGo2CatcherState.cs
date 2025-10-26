@@ -21,8 +21,7 @@ public class CashierGo2CatcherState : CashierState
         if (index < _cashier.firstRateCathcers.Count)
         {
             catcher = _cashier.firstRateCathcers[index];
-            Tween t = _cashier.transform.DOMoveX(catcher.transform.position.x, _rushSpeed).SetEase(_cashier.moveEase).SetAutoKill();
-            _rushSpeed = 0.9f;
+            Tween t = _cashier.transform.DOMoveX(catcher.transform.position.x, MoveBase.GetDuration(_cashier.transform.position, catcher.transform.position, _cashier.rushSpeed)).SetEase(_cashier.moveEase).SetAutoKill();
             index++;
             t.OnComplete(() =>
             {
