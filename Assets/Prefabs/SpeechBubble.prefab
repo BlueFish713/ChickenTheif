@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMesh: {fileID: 6457282570546042478}
   bubbleRenderer: {fileID: 8862896754720946117}
-  showTime: 20
+  showTime: 1.5
   offset: {x: 0, y: 2, z: 0}
   bubble:
   - {fileID: 5007465203087833557, guid: d00a54473f227ce40b3f528b7af4fe23, type: 3}

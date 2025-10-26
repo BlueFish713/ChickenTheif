@@ -15,8 +15,8 @@ public class CashierSellState : CashierState
         foreach (TrimmedData data in _cashier.trimmedDatas)
         {
             int price = SingletonManager.Get<Repository>().price[data.fish];
+            _cashier.Earn(price);
             _cashier.fishLayout.UnLoad();
-            // 돈 벌기
             yield return new WaitForSeconds(0.2f);
         }
         _cashier.trimmedDatas.Clear();

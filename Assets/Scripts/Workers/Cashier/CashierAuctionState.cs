@@ -18,10 +18,10 @@ public class CashierAuctionState : CashierState
         int originalPrice = repository.price[_cashier.untrimmedDatas[0].fish];
         float priceUp = UnityEngine.Random.Range(5f, 10f); // 가격 뻥튀기 배율
         int price = (int)(Math.Round(originalPrice * priceUp / 100f) * 100f); // xx00원 형태로 정리
-        _cashier.StartCoroutine(AuctionCoroutine(originalPrice, price));
+        _cashier.StartCoroutine(AuctionCoroutine(originalPrice, price, _cashier.untrimmedDatas[0].fish));
     }
 
-    IEnumerator AuctionCoroutine(int originalPrice, int price)
+    IEnumerator AuctionCoroutine(int originalPrice, int price, FishType fish)
     {
         CustomerManager customManagerCode = SingletonManager.Get<CustomerManager>();
         List<GameObject> customers = customManagerCode.customers;
@@ -38,8 +38,8 @@ public class CashierAuctionState : CashierState
             yield return new WaitForSeconds(0.5f);
         }
 
-        // 낙찰 말풍선 띄우기
-        // 돈 벌기
+        _cashier.Say(string.Format("최고급 {0}, {1}원에 낙찰되었습니다!!", SingletonManager.Get<Repository>().fishName[fish], price));
+        _cashier.Earn(price);
         _cashier.untrimmedDatas.Clear();
         _cashier.TryChangeState(CashierStateType.CashierWaitState);
     }
