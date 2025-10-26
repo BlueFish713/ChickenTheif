@@ -106,7 +106,7 @@ MonoBehaviour:
   trimmedDatas: []
   targeted: 0
   working: 0
-  workTime: 3
+  workTime: 8
 --- !u!95 &6622478154961609854
 Animator:
   serializedVersion: 7
