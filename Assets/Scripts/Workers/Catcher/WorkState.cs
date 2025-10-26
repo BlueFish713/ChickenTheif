@@ -5,6 +5,5 @@ public class CatcherWorkState : CatcherState
         base.Handle(catcher);
         if (_catcher is Fisher) return;
         _catcher.Catch();
-        _catcher.TryChangeState(CatcherStateType.CatcherConveyState);
     }
 }

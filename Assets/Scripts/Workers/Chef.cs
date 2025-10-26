@@ -15,6 +15,15 @@ public class Chef : Worker
     //손질하는데 걸리는 시간
     public float workTime;
 
+    void Start()
+    {
+        
+        EventManager.Subscribe(EventName.Upgrade, () =>
+        {
+            workTime -= 0.5f;
+        });
+    }
+
     //Catcher에 의해 호출됨(일단 어떤 Cathcer에 의해 타겟팅 됐는지 알기 위해 Catcher catcher 매개변수 추가함)
     public void Targeted(Catcher catcher)
     {

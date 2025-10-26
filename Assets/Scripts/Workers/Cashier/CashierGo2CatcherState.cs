@@ -22,6 +22,7 @@ public class CashierGo2CatcherState : CashierState
         {
             catcher = _cashier.firstRateCathcers[index];
             Tween t = _cashier.transform.DOMoveX(catcher.transform.position.x, MoveBase.GetDuration(_cashier.transform.position, catcher.transform.position, _cashier.rushSpeed)).SetEase(_cashier.moveEase).SetAutoKill();
+            _cashier.GetComponent<SpriteRenderer>().flipX = MoveBase.GetFlipX(_cashier.transform.position, catcher.transform.position);
             index++;
             t.OnComplete(() =>
             {

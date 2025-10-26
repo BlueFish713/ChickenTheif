@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using NUnit.Framework.Constraints;
 using System;
-using Unity.VisualScripting;
 
 public enum CatcherStateType
 {
@@ -40,7 +38,8 @@ public class Catcher : Worker
     public CatcherStateType nowStateType;
 
     //Catcher의 Convey속도
-    [SerializeField] public float conveySpeed;
+    [HideInInspector] public float conveySpeed;
+    public float conveySpeedOriginal;
 
     public GameObject firstDisplayPrefab;
     public GameObject firstDisplay;
@@ -60,6 +59,12 @@ public class Catcher : Worker
             //transform.SetParent(null);
             if (firstDisplay != null)
                 firstDisplay.transform.localPosition = transform.position;
+        });
+        
+        EventManager.Subscribe(EventName.Upgrade, () =>
+        {
+            conveySpeed = conveySpeedOriginal + (WM.cashierLevel) * 2;
+            catchPeriod -= 0.5f;
         });
     }
 
@@ -85,40 +90,62 @@ public class Catcher : Worker
     //물고기 잡기
     public virtual void Catch()
     {
+        StartCoroutine(catchCo());
+        //GetComponent<Animator>().Play("Up");
+    }
+
+    System.Collections.IEnumerator catchCo()
+    {
+        TryChangeState(CatcherStateType.CatcherWaitState);
         //GetComponent<Animator>().Play("Down");
         //만약 최대 소지 개수에 도달해있으면 return;
         if (untrimmedDatas.Count >= maxFishCount)
         {
-            return;
-        }
-
-        //대충 Random이용해서 UntrimmedData 생성(구현 부탁)
-        UntrimmedData caughtFish = new UntrimmedData();
-
-        int rand = (int)UnityEngine.Random.Range(1, 5);
-        if (rand == 3 && !hasFirstData)
-        {
-            caughtFish.fish = FishType.GoDeungEo;
-            caughtFish.rate = RateType.First;
-
-            firstData = caughtFish;
-            hasFirstData = true;
-
-            firstDisplay = Instantiate(firstDisplayPrefab);
-            //firstDisplay.transform.SetParent(transform);
-            firstDisplay.transform.localPosition = transform.localPosition;
-            firstDisplay.GetComponent<Animator>().Play(ReflectionBase.StringFromEnum(caughtFish.fish) + "1");
-            //firstDisplay.GetComponent<SpriteRenderer>().sprite = SingletonManager.Get<FishImageRepository>().fishImages[caughtFish.fish];
+            yield return null;
         }
         else
         {
-            caughtFish.fish = FishType.MunEo;
-            caughtFish.rate = RateType.Second;
+            if (this is Diver)
+            {
+                GetComponent<Animator>().Play("DiverDown");
+                transform.DOMoveY(-15, 0.9f).SetEase(Ease.InQuint);
 
-            untrimmedDatas.Add(caughtFish);
-            fishLayout.Load(caughtFish);
+                yield return new WaitForSeconds(2f);
+                GetComponent<Animator>().Play("DiverUp");
+                transform.DOMoveY(0, 0.9f).SetEase(Ease.OutQuint);
+            }
+
+            //대충 Random이용해서 UntrimmedData 생성(구현 부탁)
+            UntrimmedData caughtFish = new UntrimmedData();
+
+            int rand = (int)UnityEngine.Random.Range(1, 5);
+            if (rand == 3 && !hasFirstData)
+            {
+                caughtFish.fish = FishType.GoDeungEo;
+                caughtFish.rate = RateType.First;
+
+                firstData = caughtFish;
+                hasFirstData = true;
+
+                firstDisplay = Instantiate(firstDisplayPrefab);
+                //firstDisplay.transform.SetParent(transform);
+                firstDisplay.transform.localPosition = transform.localPosition;
+                firstDisplay.GetComponent<Animator>().Play(ReflectionBase.StringFromEnum(caughtFish.fish) + "1");
+                //firstDisplay.GetComponent<SpriteRenderer>().sprite = SingletonManager.Get<FishImageRepository>().fishImages[caughtFish.fish];
+            }
+            else
+            {
+                caughtFish.fish = FishType.MunEo;
+                caughtFish.rate = RateType.Second;
+
+                untrimmedDatas.Add(caughtFish);
+                fishLayout.Load(caughtFish);
+            }
         }
         
-        //GetComponent<Animator>().Play("Up");
+        GetComponent<Animator>().Play("Wait");
+        TryChangeState(CatcherStateType.CatcherConveyState);
+        yield return null;
     }
+    
 }

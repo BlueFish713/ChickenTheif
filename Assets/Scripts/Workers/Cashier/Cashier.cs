@@ -19,9 +19,12 @@ public class Cashier : Worker
     public List<TrimmedData> trimmedDatas = new List<TrimmedData>();
     CashierState nowState;
     public CashierStateType nowStateType;
-    public float conveySpeed;
-    public float returnSpeed;
-    public float rushSpeed = 4;
+    [HideInInspector] public float conveySpeed;
+    [HideInInspector] public float returnSpeed;
+    [HideInInspector] public float rushSpeed = 4;
+    public float conveySpeedOriginal;
+    public float returnSpeedOriginal;
+    public float rushSpeedOriginal;
     public List<Catcher> firstRateCathcers = new List<Catcher>();
 
     public FishLayout fishLayout;
@@ -42,6 +45,12 @@ public class Cashier : Worker
         speechBubbleInstance = Instantiate(speechBubblePrefab);
         speechBubbleCode = speechBubbleInstance.GetComponent<SpeechBubble>();
         speechBubbleCode.Setup(transform);
+        EventManager.Subscribe(EventName.Upgrade, () =>
+        {
+            conveySpeed = conveySpeedOriginal + (WM.cashierLevel) * 2;
+            returnSpeed = returnSpeedOriginal + (WM.cashierLevel) * 2;
+            rushSpeed = rushSpeedOriginal + (WM.cashierLevel) * 2;
+        });
     }
 
     void Start()
