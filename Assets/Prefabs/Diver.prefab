@@ -111,6 +111,7 @@ MonoBehaviour:
   fishLayout: {fileID: 1467256650666006389}
   nowStateType: 0
   conveySpeed: 5.8
+  conveySpeedOriginal: 0
   firstDisplayPrefab: {fileID: 2027135397248946212, guid: 8235998602555de44833687b99699954, type: 3}
   firstDisplay: {fileID: 0}
   moveEase: 1
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09d88da541cdd3489d3ccb088518f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spacing: 1
+  spacing: 0.5
   fishPrefab: {fileID: 5372490453312177160, guid: 08187fa357fcf7f4586a87a4fdb97c6a, type: 3}
   loadedGameObject: []
   firstIndex: 

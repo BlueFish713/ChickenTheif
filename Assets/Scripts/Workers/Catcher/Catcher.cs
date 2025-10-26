@@ -56,9 +56,10 @@ public class Catcher : Worker
         // });
         EventManager.Subscribe(EventName.BoatRetrunFinished, () =>
         {
-            //transform.SetParent(null);
+            transform.SetParent(null);
+            firstDisplay.transform.SetParent(null);
             if (firstDisplay != null)
-                firstDisplay.transform.localPosition = transform.position;
+                firstDisplay.transform.position = transform.position;
         });
         
         EventManager.Subscribe(EventName.Upgrade, () =>

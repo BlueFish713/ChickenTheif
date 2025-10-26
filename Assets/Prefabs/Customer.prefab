@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6568507140275484394}
   - component: {fileID: 67242386377619747}
   - component: {fileID: 3606598625722184311}
+  - component: {fileID: 5764954453606310385}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Untagged
@@ -103,3 +104,25 @@ MonoBehaviour:
   moveSpeed: 0.7
   ease: 1
   speechBubblePrefab: {fileID: 2362695819054026698, guid: 9450d01eebf266b49b29b092304106f0, type: 3}
+--- !u!95 &5764954453606310385
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7608588300350890495}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0ffa0028f8cb2b4cae835b2d70af132, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

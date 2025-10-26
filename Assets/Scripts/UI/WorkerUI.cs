@@ -16,9 +16,13 @@ public class WorkerUI : MonoBehaviour
     public TMP_Text workerPanelText;
     public TMP_Text workerCountText;
 
-    void Awake()
+    [SerializeField]
+    UpgradeManager upgradeManager;
+
+    void Start()
     {
         UpdateText();
+        WorkerPanel.InstantDisappear();
     }
 
     public void CashierButtonClick()
@@ -77,5 +81,10 @@ public class WorkerUI : MonoBehaviour
             WorkerType.Diver => $"고용하기({SingletonManager.Get<WorkerManager>().divers.Count}/3)",
             _ => workerCountText.text
         };
+    }
+
+    public void Upgrade()
+    {
+        upgradeManager.Upgrade(workerType);
     }
 }
