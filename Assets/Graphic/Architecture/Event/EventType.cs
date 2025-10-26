@@ -5,5 +5,6 @@ public enum EventName
     BoatRetrunFinished, //배가 완전히 돌아옴(배 돌아오는 애니메이션 종료)
     CallCashier, // chef가 cashier 부름
     FirstRateCallCashier, // chef가 cashier 부름
-    DayChanged
+    DayChanged,
+    Upgrade
 }

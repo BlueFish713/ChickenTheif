@@ -35,6 +35,11 @@ public class WorkerManager : MonoBehaviour
     public bool chefCallQueued = false;
     public List<Catcher> firstRateCathcers = new List<Catcher>();
 
+    public int cashierLevel = 0;
+    public int chefLevel = 0;
+    public int fisherLevel = 0;
+    public int diverLevel = 0;
+
     void Awake()
     {
         chefCallQueued = false;
