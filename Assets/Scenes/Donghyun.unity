@@ -477,6 +477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 300
+  night: 0
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3158,6 +3159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1100799559}
+  - component: {fileID: 1100799560}
   m_Layer: 0
   m_Name: Lights
   m_TagString: Untagged
@@ -3186,6 +3188,26 @@ Transform:
   - {fileID: 1198001424}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1100799560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100799558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a780f075d133a4ca8cb706f296bb5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalLightControl: {fileID: 86511927}
+  lights:
+  - {fileID: 1170581076}
+  - {fileID: 118688203}
+  - {fileID: 964199689}
+  - {fileID: 2142107004}
+  - {fileID: 323627985}
+  - {fileID: 1198001425}
 --- !u!1 &1170581075
 GameObject:
   m_ObjectHideFlags: 0

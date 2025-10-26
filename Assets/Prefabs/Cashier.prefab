@@ -155,9 +155,9 @@ MonoBehaviour:
   untrimmedDatas: []
   trimmedDatas: []
   nowStateType: 0
-  conveySpeed: 3
-  returnSpeed: 3
-  rushSpeed: 6
+  conveySpeed: 7
+  returnSpeed: 8
+  rushSpeed: 10.6
   firstRateCathcers: []
   fishLayout: {fileID: 5155116388704759688}
   moveEase: 1

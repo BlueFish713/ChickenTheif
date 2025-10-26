@@ -158,7 +158,7 @@ MonoBehaviour:
   hasFirstData: 0
   fishLayout: {fileID: 4805782227640946037}
   nowStateType: 0
-  conveySpeed: 4
+  conveySpeed: 5.8
   firstDisplayPrefab: {fileID: 2027135397248946212, guid: 8235998602555de44833687b99699954, type: 3}
   firstDisplay: {fileID: 0}
   moveEase: 1

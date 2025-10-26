@@ -21,7 +21,6 @@ public class CashierGo2ChefState : CashierState
         if (index < WM.chefs.Count)
         {
             chef = WM.chefs[index];
-            _conveySpeed = 0.8f;
             index++;
             Tween t = _cashier.transform.DOMoveX(chef.transform.position.x, MoveBase.GetDuration(_cashier.transform.position, chef.transform.position, _conveySpeed)).SetEase(_cashier.moveEase).SetAutoKill();
 
