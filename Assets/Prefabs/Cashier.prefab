@@ -161,6 +161,8 @@ MonoBehaviour:
   firstRateCathcers: []
   fishLayout: {fileID: 5155116388704759688}
   moveEase: 1
+  speechBubblePrefab: {fileID: 2362695819054026698, guid: 9450d01eebf266b49b29b092304106f0, type: 3}
+  moneyEarnedPrefab: {fileID: 5194627740589928316, guid: 1c8fc7f91e4587f44b863a5ee6fa53bc, type: 3}
 --- !u!114 &-6387973423298036218
 MonoBehaviour:
   m_ObjectHideFlags: 0

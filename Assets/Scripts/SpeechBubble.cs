@@ -16,6 +16,7 @@ public class SpeechBubble : MonoBehaviour
     {
         this.target = target;
         transform.position = target.position + offset;
+        gameObject.SetActive(false);
     }
 
     public void Show(string message)

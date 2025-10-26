@@ -14,7 +14,7 @@ public enum CashierStateType
 }
 public class Cashier : Worker
 {
-    
+
     public List<UntrimmedData> untrimmedDatas = new List<UntrimmedData>();
     public List<TrimmedData> trimmedDatas = new List<TrimmedData>();
     CashierState nowState;
@@ -27,6 +27,10 @@ public class Cashier : Worker
     public FishLayout fishLayout;
 
     public Ease moveEase = Ease.Linear;
+    public GameObject speechBubblePrefab;
+    GameObject speechBubbleInstance;
+    SpeechBubble speechBubbleCode;
+    public GameObject moneyEarnedPrefab;
 
     void Awake()
     {
@@ -35,8 +39,11 @@ public class Cashier : Worker
         //     if (nowStateType == CashierStateType.CashierWaitState)
         //         TryChangeState(CashierStateType.CashierGo2ChefState);
         // });
+        speechBubbleInstance = Instantiate(speechBubblePrefab);
+        speechBubbleCode = speechBubbleInstance.GetComponent<SpeechBubble>();
+        speechBubbleCode.Setup(transform);
     }
-    
+
     void Start()
     {
         WM = SingletonManager.Get<WorkerManager>();
@@ -46,7 +53,7 @@ public class Cashier : Worker
     {
         if (nowState != null) nowState.Update();
     }
-    
+
     void FixedUpdate()
     {
         if (nowState != null) nowState.FixedUpdate();
@@ -59,5 +66,17 @@ public class Cashier : Worker
         nowStateType = state;
         nowState = ReflectionBase.CreateInstanceFromType(ReflectionBase.TypeFromEnum(nowStateType));
         nowState.Handle(this);
+    }
+
+    public void Say(string saying)
+    {
+        speechBubbleCode.Show(saying);
+    }
+    public void Earn(int price)
+    {
+        SingletonManager.Get<MoneyManager>().balance += (int)(price * SingletonManager.Get<MoneyManager>().margin);
+        GameObject eff = Instantiate(moneyEarnedPrefab);
+        MoneyEarned moneyEarnedCode = eff.GetComponent<MoneyEarned>();
+        moneyEarnedCode.Init(transform);
     }
 }
