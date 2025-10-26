@@ -18,9 +18,11 @@ public class Customer : MonoBehaviour
     }
     public void Assign(CustomerSlot customerSlot)
     {
-        _customerSlot = customerSlot;   
+        _customerSlot = customerSlot;
         if (_customerSlot != null)
+        {
             transform.DOMove(_customerSlot.transform.position, moveSpeed).SetEase(ease).SetAutoKill();
+        }
     }
 
     public void CallPrice(int price)

@@ -14,6 +14,7 @@ public class CatcherReturnState : CatcherState
 
     bool Wait()
     {
+            _catcher.GetComponent<Animator>().Play("Wait");
         if (_catcher is Diver) return true;
         else
         {
@@ -26,14 +27,15 @@ public class CatcherReturnState : CatcherState
         Debug.Log("CatcherReturnState MoveToSlot");
         yield return new WaitUntil(Wait);
         Debug.Log("CatcherReturnState WaitUntil Out");
+            _catcher.GetComponent<Animator>().Play("Walk");
         Tween t = _catcher.transform.DOMoveX(_catcher._slot.transform.position.x, _catcher.conveySpeed).SetEase(_catcher.moveEase).SetAutoKill();
+        _catcher.GetComponent<SpriteRenderer>().flipX = MoveBase.GetFlipX(_catcher.transform.position, _catcher._slot.transform.position);
         t.OnComplete(OnReturnedToSlot);
     }
 
     public override void Update()
     {
         base.Update();
-            _catcher.GetComponent<Animator>().Play("Walk");
         //대충 건내주기
         //_catcher.TryChangeState(CatcherStateType.CatcherReturnState);
     }

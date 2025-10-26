@@ -23,7 +23,7 @@ public class CashierGo2ChefState : CashierState
             chef = WM.chefs[index];
             index++;
             Tween t = _cashier.transform.DOMoveX(chef.transform.position.x, MoveBase.GetDuration(_cashier.transform.position, chef.transform.position, _conveySpeed)).SetEase(_cashier.moveEase).SetAutoKill();
-
+_cashier.GetComponent<SpriteRenderer>().flipX = MoveBase.GetFlipX(_cashier.transform.position, chef.transform.position);
             t.OnComplete(() =>
             {
                 ReceiveTrimmedDatas(chef.trimmedDatas);

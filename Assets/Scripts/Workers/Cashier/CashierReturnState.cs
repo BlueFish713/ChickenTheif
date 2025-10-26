@@ -13,6 +13,7 @@ public class CashierReturnState : CashierState
     void MoveToSlot()
     {
         Tween t = _cashier.transform.DOMoveX(_cashier._slot.transform.position.x, MoveBase.GetDuration(_cashier.transform.position, _cashier._slot.transform.position, _cashier.returnSpeed));
+        _cashier.GetComponent<SpriteRenderer>().flipX = MoveBase.GetFlipX(_cashier.transform.position, _cashier._slot.transform.position);
         t.OnComplete(OnReturnedToSlot);
     }
 
