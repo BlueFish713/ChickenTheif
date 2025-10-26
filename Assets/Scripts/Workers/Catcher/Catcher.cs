@@ -122,7 +122,8 @@ public class Catcher : Worker
             int rand = (int)UnityEngine.Random.Range(1, 5);
             if (rand == 3 && !hasFirstData)
             {
-                caughtFish.fish = FishType.GoDeungEo;
+                FishType randomFish = GetRandomEnum<FishType>();
+                caughtFish.fish = randomFish;
                 caughtFish.rate = RateType.First;
 
                 firstData = caughtFish;
@@ -136,17 +137,25 @@ public class Catcher : Worker
             }
             else
             {
-                caughtFish.fish = FishType.MunEo;
+                FishType randomFish = GetRandomEnum<FishType>();
+                caughtFish.fish = randomFish;
                 caughtFish.rate = RateType.Second;
 
                 untrimmedDatas.Add(caughtFish);
                 fishLayout.Load(caughtFish);
             }
         }
-        
+
         GetComponent<Animator>().Play("Wait");
         TryChangeState(CatcherStateType.CatcherConveyState);
         yield return null;
+    }
+    
+    T GetRandomEnum<T>()
+    {
+        Array values = Enum.GetValues(typeof(T));
+        int index = UnityEngine.Random.Range(0, values.Length);
+        return (T)values.GetValue(index);
     }
     
 }
