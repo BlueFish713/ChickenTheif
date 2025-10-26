@@ -53,12 +53,12 @@ public class Catcher : Worker
         EventManager.Subscribe(EventName.BoatRetrunStart, () =>
         {
             if (firstDisplay != null)
-                firstDisplay.transform.localPosition = Vector2.zero;
+                firstDisplay.transform.localPosition = transform.localPosition;
         });
         EventManager.Subscribe(EventName.BoatRetrunFinished, () =>
         {
             if (firstDisplay != null)
-                firstDisplay.transform.localPosition = Vector2.zero;
+                firstDisplay.transform.localPosition = transform.localPosition;
         });
     }
 
@@ -103,9 +103,10 @@ public class Catcher : Worker
             hasFirstData = true;
 
             firstDisplay = Instantiate(firstDisplayPrefab);
-            firstDisplay.transform.SetParent(transform);
-            firstDisplay.transform.localPosition = Vector2.zero;
-            firstDisplay.GetComponent<SpriteRenderer>().sprite = SingletonManager.Get<FishImageRepository>().fishImages[caughtFish.fish];
+            //firstDisplay.transform.SetParent(transform);
+            firstDisplay.transform.localPosition = transform.localPosition;
+            firstDisplay.GetComponent<Animator>().Play(ReflectionBase.StringFromEnum(caughtFish.fish) + "1");
+            //firstDisplay.GetComponent<SpriteRenderer>().sprite = SingletonManager.Get<FishImageRepository>().fishImages[caughtFish.fish];
         }
         else
         {

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-[RequireComponent(typeof(UnityEngine.Rendering.Universal.Light2D))]
+[RequireComponent(typeof(UnityEngine.Rendering.Universal.Light2D)), Singleton]
 public class GlobalLightControl : MonoBehaviour
 {
     public float duration = 5f;

@@ -22,7 +22,8 @@ public class FishLayout : MonoBehaviour
         Debug.Log("Load Start");
         GameObject fish = Instantiate(fishPrefab);
 
-        fish.GetComponent<SpriteRenderer>().sprite = repo.fishImages[untrimmedData.fish];
+        //fish.GetComponent<SpriteRenderer>().sprite = repo.fishImages[untrimmedData.fish];
+        fish.GetComponent<Animator>().Play(ReflectionBase.StringFromEnum(untrimmedData.fish));
 
         fish.transform.SetParent(transform);
 
