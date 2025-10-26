@@ -12,4 +12,5 @@ public class MoneyManager : MonoBehaviour
     public float margin = 0.05f;
     public int upgradeCost = 100;
     public int createCost = 100;
+    public int activeRate = 0;
 }

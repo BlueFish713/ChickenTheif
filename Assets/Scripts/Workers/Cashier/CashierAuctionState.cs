@@ -16,7 +16,7 @@ public class CashierAuctionState : CashierState
     {
         Repository repository = SingletonManager.Get<Repository>();
         int originalPrice = repository.price[_cashier.untrimmedDatas[0].fish];
-        float priceUp = UnityEngine.Random.Range(5f, 10f); // 가격 뻥튀기 배율
+        float priceUp = UnityEngine.Random.Range(3f, 5f); // 가격 뻥튀기 배율
         int price = (int)(Math.Round(originalPrice * priceUp / 100f) * 100f); // xx00원 형태로 정리
         _cashier.StartCoroutine(AuctionCoroutine(originalPrice, price, _cashier.untrimmedDatas[0].fish));
     }

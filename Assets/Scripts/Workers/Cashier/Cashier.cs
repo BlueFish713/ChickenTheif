@@ -75,6 +75,7 @@ public class Cashier : Worker
     public void Earn(int price)
     {
         SingletonManager.Get<MoneyManager>().balance += (int)(price * SingletonManager.Get<MoneyManager>().margin);
+        SingletonManager.Get<MoneyManager>().activeRate += 1;
         GameObject eff = Instantiate(moneyEarnedPrefab);
         MoneyEarned moneyEarnedCode = eff.GetComponent<MoneyEarned>();
         moneyEarnedCode.Init(transform);

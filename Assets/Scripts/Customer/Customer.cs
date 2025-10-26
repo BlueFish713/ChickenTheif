@@ -6,6 +6,16 @@ public class Customer : MonoBehaviour
     CustomerSlot _customerSlot;
     public float moveSpeed;
     public Ease ease;
+    public GameObject speechBubblePrefab;
+    GameObject speechBubbleInstance;
+    SpeechBubble speechBubbleCode;
+
+    void Awake()
+    {
+        speechBubbleInstance = Instantiate(speechBubblePrefab);
+        speechBubbleCode = speechBubbleInstance.GetComponent<SpeechBubble>();
+        speechBubbleCode.Setup(transform);
+    }
     public void Assign(CustomerSlot customerSlot)
     {
         _customerSlot = customerSlot;   
@@ -15,7 +25,6 @@ public class Customer : MonoBehaviour
 
     public void CallPrice(int price)
     {
-        // 말풍선 띄우기
-        Debug.Log(price);
+        speechBubbleCode.Show(string.Format("{0}원!", price));
     }
 }
