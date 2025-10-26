@@ -33,10 +33,10 @@ public class Repository : MonoBehaviour // 싱글톤
         {FishType.SeongGe, 2500 }
 
     };
-    
+
     public Dictionary<FishType, string> fishName = new Dictionary<FishType, string>
     {
-        {FishType.BaekSangARi, "백상아리"}, 
+        {FishType.BaekSangARi, "백상아리"},
         {FishType.BaJiRak, "바지락"},
         {FishType.BokEo, "복어"},
         {FishType.DaeGu, "대구"},
@@ -56,8 +56,18 @@ public class Repository : MonoBehaviour // 싱글톤
         {FishType.OJingEo, "오징어"},
         {FishType.OkDom, "옥돔"},
         {FishType.SeongGe, "성게"}
-        
+
     };
+    public Dictionary<string, FishType> specialFish = new Dictionary<string, FishType>
+    {
+        {"완도", FishType.JeonBok},
+        {"제주", FishType.OkDom},
+        {"고성", FishType.SeongGe},
+        {"고창", FishType.JangEo},
+        {"강릉", FishType.OJingEo},
+        {"무안", FishType.NakJi}
+    };
+    
     // void Awake()
     // {
     //     if (Instance == null)
